@@ -1,0 +1,791 @@
+/* SETUP */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+/* GENERAL STYLES */
+/*Default styles*/
+img {
+    max-width:100%;
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Wrapper styles */
+.wrapper {
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.innerWrapper {
+    max-width: 1600px;
+	width: 80%;
+	margin: 0 auto; 
+}
+
+/*Font Styles*/
+html{
+    font-size: 125%;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffffff;
+    letter-spacing: 0px;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+    text-align: right;
+    font-size: 6rem;
+    line-height: 117px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+h2 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2.55rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.95rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 29px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* additional class Styles (multiple sections) */
+.readMore {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 29px;
+    padding: 16px;
+}
+
+.readMore:hover {
+    text-decoration: underline;
+}
+
+.smallSectionTitle {
+    font-size: 1.75rem;
+    color: #152d20;
+}
+
+/* HEADER STYLES */
+/* Background image styles */
+.backgroundImageContainer {
+    background-image: url(../assets/tigerHeroSmall.jpg);
+    width: 100%;
+    min-height: 90vh;
+    background-size: cover;
+    background-position: 30% 100%;
+    background-repeat: no-repeat;
+}
+
+/* additional Class font styles for HEADER */
+.navAnchor {
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 29px;
+    padding-right: 6px;
+}
+
+/* Skip Link */
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 10%;
+    z-index: 999;
+    background: #ffffff;
+    border: 2px solid #152d20;
+    color: #152d20;
+    padding: 10px;
+}
+
+.skipLink:focus {
+    left: 10%;
+}
+
+/* Header Primary Nav styles */
+/* padding at top of page */
+.headerMainNav {
+    padding-top: 24px;
+}
+
+/* float Nav links */
+.headerListItem {
+    float: left;
+    padding-right: 10px;
+}
+
+/* Header Primary Nav hover styles */
+.navAnchor:hover {
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Header Hamburger Menu (hidden) */
+.openMenu {
+    position: absolute;
+    top: 10px;
+	right: 20px;
+	color:#ffffff;
+    font-size: 2rem;
+    display: none;
+}
+
+/* Header logo styles */
+.displayBlockHeader {
+    margin-top: -30px;
+    display: block;
+}
+
+/* Header Social Media Nav styles */
+.headerSocialListItem {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Social Media Nav hover styles */
+.headerSocialAnchor {
+    transition: all 300ms;
+}
+
+.headerSocialAnchor:hover {
+    /* border-bottom: 1px solid #c3d3cb; */
+    color: #c3d3cb;
+    font-size: 2rem;
+}
+
+/* Social Nav  positioning*/ 
+ .socialNav {
+    padding-top: 80px;
+    float: right;
+    padding-right: 40px;
+}
+
+/* MAIN STYLES */
+/* "SUZIE'S STORY" Section Styles */
+.suzieContainer {
+    background-color: #152d20;
+    padding: 110px 0;
+}
+
+/* Section Float and padding styles */
+.suzieImage {
+    width: 315px;
+    float: left;
+}
+
+.suzieContent {
+    width: calc((100% - 315px) - 42px);
+    float: left;
+    margin-left: 42px;
+}
+
+.suziePara, .zebraPara, .bondPara {
+    padding-top: 18px;
+    padding-bottom: 32px;
+}
+
+/* Read More button */
+.suzieReadMore {
+    background-color: #ffffff;
+    color: #152d20;
+}
+
+/* "SOME OF OUR FRIENDS" Section Styles */
+.friendsContainer {
+    background-color: #c3d3cb;
+}
+
+/* Heading styles */
+.friendsSectionHeading {
+    text-align: center;
+    color: #152d20;
+    padding: 96.5px 0;
+}
+
+.blockSection {
+    display: block;
+}
+
+/* Section float styles */
+.friendsImageContainer {
+    width: calc((100% - 80px) / 3);
+    float: left;
+    padding-bottom: 109px;
+    margin: 0 20px;
+}
+
+.friendsImageContainer:first-of-type {
+    margin-left: 0;
+}
+
+.friendsImageContainer:last-of-type {
+    margin-right: 0;
+}
+
+/* Hover state styles */
+.friendsImage {
+    transition: all 100ms;
+}
+
+.friendsImage:hover {
+    border: 4px solid #152d20;
+    border-radius: 4px;
+}
+
+/* "ICON LINKS" Section Styles */
+.iconLinks {
+    background-color: #152d20;
+}
+
+.iconContainer {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 84px;
+    padding-bottom: 51.3px;
+}
+
+.paw {
+    font-size: 2.95rem;
+    padding-bottom: 14px;
+}
+
+.calendar {
+    font-size: 3.15rem;
+    padding-bottom: 25px;
+}
+
+.bag {
+    font-size: 3.55rem;
+    padding-bottom: 24px;
+}
+
+.iconLink {
+    text-align: center;
+    width: calc(100% / 3);
+    float: left;
+}
+
+/* Icon Link hover styles */
+.iconAnchor:hover {
+    color: #c3d3cb;
+}
+
+.iconSectionIcon {
+    transition: all 500ms;
+}
+
+.iconSectionIcon:hover {
+    transform: scale(2);
+}
+
+/* "ZEBRA" and "BOND" Section Styles */
+/* Background color */
+.zebraWritten, .bondWritten {
+    background-color: #ffffff;
+    padding: 125px 90px;
+}
+
+/* font styles */
+.zebraPara, .bondPara {
+    color: #152d20;
+}
+
+/* Read More button */
+.greenReadMore {
+    color: #ffffff;
+    background-color: #152d20;
+}
+
+/* "ZEBRA" section float styles */
+.zebraContentContainer {
+    position: relative;
+}
+
+.zebraWritten, .zebraImageContainer {
+    width: 50%;
+    float: left;
+}
+
+.zebraImageContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.zebraImage {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* "BOND" Section float styles */
+.bondContentContainer {
+    position: relative;
+}
+
+.bondWritten, .bondImageContainer {
+    width: 50%;
+    float: right;
+}
+
+.bondImageContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.highFiveImage {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* UPPER FOOTER STYLES */
+/* Background and padding styles */
+.footer {
+    background-color: #152d20;
+}
+
+.upperFooterContainer {
+    padding: 92px 0 109px 0;
+}
+
+/* Font styles */
+.footerCentered {
+    text-align: center;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.contactEmail {
+    text-transform: lowercase;
+}
+
+.addressPara {
+    font-style: normal;
+    line-height: 29px;
+    margin: 0;
+}
+
+.footerAnchor {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 29px;
+}
+
+/* Hover state styles */
+.footerAnchor:hover {
+    border-bottom: 1px solid #ffffff;
+}
+
+.contactEmail:hover, .contactPhone:hover {
+    border-bottom: 1px solid #ffffff
+}
+
+/* Float Styles */
+.footerNav {
+    width: 20%;
+    float: left;
+}
+
+.newsletterSubscribe {
+    width: 50%;
+    float: left;
+}
+
+.companyContact {
+    width: 30%;
+    float: left;
+}
+
+.subscribeForm {
+    margin-top: 11px;
+}
+
+/* Subscribe form styles */
+.subscribeForm input[type="email"] {
+    border: none;
+    color:#1f2022;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-transform: lowercase;
+    padding: 10px 33px;
+    margin-top: 0; 
+    margin-right: 0;
+    float: left;
+    width: 75%;
+}
+
+.subscribeForm input[type="submit"] {
+    border: none;
+    color: #ffffff;
+    background-color: #000000;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 29px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin-left: 0;
+    cursor: pointer;
+    float: left;
+    width: 25%;
+}
+
+.subscribeForm input[type="submit"]:active {
+	box-shadow: 0 4px 10px rgb(0,0,0);
+	border-radius: 5px;
+}
+
+/* LOWER FOOTER STYLES */
+/* Background styles */
+.lowerFooter {
+    background-color: #000000;
+}
+
+.footerCopyright {
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 13px 0;
+}
+
+/* RESPONSIVE STYLES */
+/* Adjust footer float percentages, Adjust Header Logo & Social Nav */
+@media (max-width: 1350px) {
+    /* Header */
+    h1 {
+        font-size: 4rem;
+        line-height: 90px;
+        padding-top: 80px;
+    }
+
+     .socialNav {
+        padding-top: 110px;
+    }
+    
+    /* Footer Float styles */
+    .footerNav {
+        width: 100%;
+    }
+
+    .footerListItem {
+        float: left;
+        width: 25%;
+        padding-top: 42px;
+        text-align: center;
+    }
+
+    .footerAnchor {
+       padding: 0 10px;
+    }
+
+    .newsletterSubscribe {
+        width: 100%;
+        padding-top: 42px;
+    }
+
+    .subscribeForm input[type="email"] {
+        text-align: center;
+        color:#232323
+    }
+
+    .companyContact {
+        width: 100%;
+        padding: 42px 0;
+    }
+
+    .alignRight {
+        text-align: center;
+    }
+
+    /* Footer padding styles */
+    .upperFooterContainer {
+        padding: 0;
+    }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    /* Header */
+    h1 {
+        font-size: 3rem;
+        line-height: 70px;
+        padding-top: 100px;
+    }
+
+    .socialNav {
+        padding-top: 155px;
+    }
+
+    /* "SUZIE'S STORY" Section Styles */
+    /* Section Float and padding styles */
+    .suzieContainer {
+        padding: 51px 0;
+    }
+    
+    .suzieImage {
+        width: 100%;
+    }
+
+    .suzieContent {
+        width: 100%;
+        padding-top: 51px; 
+        margin-left: 0;
+    }
+
+    .suziePara {
+        padding: 19px 0 40px 0;
+    }
+
+    /* Font styles */
+    .suzieButton {
+        text-align: center;
+        display: block;
+    }
+
+    /* "SOME OF OUR FRIENDS" Section Styles */
+    /* Padding styles */
+    .friendsSectionHeading {
+        padding: 40px 0;
+    }
+
+    .friendsImageContainer {
+        padding-bottom: 51px;
+    }
+
+    /* "ZEBRA" section layout styles */
+    .zebraWritten, .zebraImageContainer {
+        width: 100%;
+    }
+
+    .zebraImageContainer {
+        position: static;
+    }
+
+    .zebraWritten, .bondWritten {
+        padding: 38px 20px 51px;
+    }
+
+    .zebraPara, .bondPara {
+        padding-top: 7px;
+        padding-bottom: 50px;
+    }
+
+    /* "BOND" Section layout styles */
+    .bondWritten, .bondImageContainer {
+        width: 100%;
+    }
+
+    .bondImageContainer {
+        position: static;
+    }
+
+    /* "ZEBRA" and "BOND" Section font styles */
+    .zebraWritten, .bondWritten {
+        text-align: center;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    /* General Styles */
+    .innerWrapper {
+        width: 90%;
+    }
+
+    h1 {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-size: 1.5rem;
+        line-height: 29.2px;
+        padding: 0;
+        margin: 0;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 1.365rem;
+    }
+
+    /* Header */
+    .headerList {
+        display: none;
+    }
+    
+    .openMenu {
+        display: inline-block;
+    }
+
+    .socialNav {
+        display: none;
+    }
+
+    .displayBlockHeader {
+        margin: 0;
+    }
+
+    /* "FRIENDS" Section styles */
+    .friendsImageContainer {
+        width: calc((100% / 2) - 9px);
+        float: left;
+    }
+
+    .friendsImageContainer:first-of-type {
+        margin-right: 4.5px;
+    }
+
+    .friendsImageContainer:nth-child(odd) {
+        margin: 0 0 0 4.5px;
+    }
+    
+    .friendsImageContainer:last-of-type {
+        display: none;
+    }
+
+    /* "ICON LINKS" Section Styles */
+
+    .iconContainer {
+        width: 90%;
+        padding-top: 51px;
+        padding-bottom: 42px;
+    }
+
+    .paw {
+        font-size: 2.55rem;
+        padding-bottom: 21px;
+    }
+
+    .animal, .events {
+        padding-bottom: 33px;
+    }
+
+    .calendar {
+        font-size: 2.5rem;
+        padding-bottom: 14.5px;
+    }
+
+    .bag {
+        font-size: 2.55rem;
+        padding-bottom: 18px;
+    }
+
+    .iconLink {
+        text-align: center;
+        width: 100%;
+    }
+
+    .iconSectionIcon:hover {
+        transform: scale(1.5);
+    }
+    
+    /* UPPER FOOTER Styles */
+    .subscribeForm input[type="email"] {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .subscribeForm input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    /* GENERAL FONT STYLES */
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    /* ADDITIONAL CLASS STYLES*/
+    .smallSectionTitle {
+        font-size: 1.1rem;
+    }
+
+    .footerCentered {
+        font-size: 0.8rem;
+    }
+
+    .addressPara {
+        font-size: 0.7rem;
+        line-height: 22px;
+    }
+
+    .footerAnchor {
+        font-size: 0.9rem;
+        padding: 0 5px;
+    }
+
+    .subscribeForm input[type="email"] {
+        font-size: 0.9rem;
+    }
+
+    .footerCopyright {
+        font-size: 0.7rem;
+    }
+}
+
+/* Under 350px (no known phones, but just in case!) */
+@media (max-width: 350px) {
+    .footerAnchor {
+        font-size: 0.7rem;
+    }
