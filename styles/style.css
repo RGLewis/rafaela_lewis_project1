@@ -123,7 +123,7 @@ a {
     background-repeat: no-repeat;
 }
 
-/* additional Class font styles for HEADER */
+/* Additional Class font styles for HEADER */
 .navAnchor {
     font-weight: 600;
     font-size: 1.1rem;
@@ -147,13 +147,13 @@ a {
     left: 10%;
 }
 
-/* Header Primary Nav styles */
+/* Header Main Nav styles */
 /* padding at top of page */
 .headerMainNav {
     padding-top: 24px;
 }
 
-/* float Nav links */
+/* float Nav List Items */
 .headerListItem {
     float: left;
     padding-right: 10px;
@@ -193,13 +193,12 @@ a {
 }
 
 .headerSocialAnchor:hover {
-    /* border-bottom: 1px solid #c3d3cb; */
     color: #c3d3cb;
     font-size: 2rem;
 }
 
 /* Social Nav  positioning*/ 
- .socialNav {
+.socialNav {
     padding-top: 80px;
     float: right;
     padding-right: 40px;
@@ -497,6 +496,7 @@ a {
     background-color: #000000;
 }
 
+/* Font styles */
 .footerCopyright {
     font-weight: 400;
     font-size: 0.9rem;
@@ -672,7 +672,7 @@ a {
         display: inline-block;
     }
 
-    .socialNav {
+    .headerSocialMedia {
         display: none;
     }
 
@@ -699,7 +699,6 @@ a {
     }
 
     /* "ICON LINKS" Section Styles */
-
     .iconContainer {
         width: 90%;
         padding-top: 51px;
